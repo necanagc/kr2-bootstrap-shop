@@ -3,36 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная — Bootstrap Shop</title>
+    <title>Муз-Раб</title>
     <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet">
     <link rel="stylesheet" href="css/custom.css">
 
 </head>
 <body>
-    <header class="bg-primary text-white py-4">
-    <div class="container">
-        <div class="row align-items-center">
-        <div class="col-12 col-md-8">
-            <h1 class="h3 mb-1">Bootstrap Shop</h1>
-            <p class="mb-0 opacity-75">
-            Учебный интернет-магазин на Bootstrap
-            </p>
-        </div>
-
-        <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
-            <span class="badge bg-light text-primary">
-            КР №2
-            </span>
-        </div>
-        </div>
-    </div>
-    </header>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
+            <a class="navbar-brand" href="index.html">Муз<span>-Раб</span></a>
 
             <button
             class="navbar-toggler"
@@ -53,11 +34,7 @@
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href="catalog.html">Каталог</a>
-                </li>
-
-                <li class="nav-item">
-                <a class="nav-link" href="product.html">Товар</a>
+                <a class="nav-link" href="catalog.html">Музыканты</a>
                 </li>
 
                 <li class="nav-item">
@@ -75,7 +52,7 @@
                     Дополнительно
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
+                    <li><a class="dropdown-item" href="catalog.html">Все музыканты</a></li>
                     <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
                     <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
                 </ul>
@@ -88,58 +65,54 @@
 
     <main>
         <section class="container my-5">
-            <div class="row align-items-center g-4">
-            <div class="col-12 col-lg-6">
-                <h2 class="display-5 fw-bold">
-                Учебный каталог товаров на Bootstrap
-                </h2>
-                <p class="lead text-muted">
-                Проект демонстрирует использование Bootstrap-сетки,
-                адаптивных колонок и базовых utility-классов.
-                </p>
-                <a class="btn btn-primary btn-lg" href="catalog.html">
-                Перейти в каталог
-                </a>
-            </div>
-
-            <div class="col-12 col-lg-6">
-                <div class="p-5 bg-light border rounded text-center">
-                <p class="mb-0 text-muted">
-                    Здесь может быть изображение, баннер или промо-блок.
-                </p>
+            <div class="hero row align-items-center g-0 shadow-sm">
+                <div class="col-12 col-lg-6 p-4 p-md-5">
+                    <p class="section-kicker mb-3">Кастинг открыт · состав почти собран</p>
+                    <h1 class="display-4 fw-bold">Не хватает кого-то на басу?</h1>
+                    <p class="lead mb-4">
+                        Подберём музыканта в группу: с чувством ритма, алкоголизмом и прочими радостями.
+                    </p>
+                    <a class="btn btn-primary btn-lg" href="catalog.html">Выбрать музыканта</a>
                 </div>
-            </div>
+                <div class="col-12 col-lg-6">
+                    <img
+                        class="hero-image"
+                        src="images/IR6JgF6nQx6B3-r15J_LUInFx4rtfj2k2N6dJb64IFMHHAVC-M3W0xW_TmhrTQRWi4MoXEFRdZWsp-QUNtMh-0CV.jpg"
+                        alt="Гитарист на сцене"
+                    >
+                </div>
             </div>
         </section>
     </main> 
 
     <section class="container my-5">
-        <h2 class="text-center mb-4">Преимущества проекта</h2>
+        <p class="section-kicker text-center mb-2">Условия сотрудничества</p>
+        <h2 class="text-center mb-4">Группа мечты — всего в пару кликов</h2>
 
         <div class="row g-4">
             <div class="col-12 col-md-4">
-            <div class="p-4 border rounded h-100 bg-white">
-                <h3 class="h5">Bootstrap-сетка</h3>
+            <div class="feature-card p-4 h-100">
+                <h3 class="h5">Без прослушивания в гараже</h3>
                 <p class="mb-0 text-muted">
-                Страница построена на 12-колоночной системе Bootstrap.
+                Профили и специализация уже на странице. Но джем всё равно приветствуется.
                 </p>
             </div>
             </div>
 
             <div class="col-12 col-md-4">
-            <div class="p-4 border rounded h-100 bg-white">
-                <h3 class="h5">Адаптивность</h3>
+            <div class="feature-card p-4 h-100">
+                <h3 class="h5">Под ваш звук</h3>
                 <p class="mb-0 text-muted">
-                Колонки меняют ширину в зависимости от размера экрана.
+                От ровного баса до соло, которое внезапно стало отдельной песней.
                 </p>
             </div>
             </div>
 
             <div class="col-12 col-md-4">
-            <div class="p-4 border rounded h-100 bg-white">
-                <h3 class="h5">Готовая база</h3>
+            <div class="feature-card p-4 h-100">
+                <h3 class="h5">Заявка без контракта со звездой</h3>
                 <p class="mb-0 text-muted">
-                Проект подготовлен к добавлению карточек, форм и модальных окон.
+                Оставьте заявку — никаких райдеров на 14 страниц (пока что).
                 </p>
             </div>
             </div>
@@ -147,53 +120,74 @@
     </section>
 
     <section class="container my-5">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="mb-0">Популярные товары</h2>
+        <div id="popular" class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <p class="section-kicker mb-1">Свободны и готовы к репетиции</p>
+                <h2 class="mb-0">Наши музыканты</h2>
+            </div>
             <a class="btn btn-outline-primary" href="catalog.html">
-            Все товары
+            Весь состав
             </a>
         </div>
 
         <div class="row g-4">
             <div class="col-12 col-md-6 col-lg-4">
-            <div class="border rounded h-100 p-4">
-                <span class="badge bg-success mb-3">Новинка</span>
-                <h3 class="h5">Товар 1</h3>
-                <p class="text-muted">
-                Краткое описание учебного товара.
-                </p>
-                <p class="fw-bold mb-3">1000 руб.</p>
-                <a class="btn btn-primary" href="product.html">
+            <div class="card h-100 shadow-sm">
+                <img class="card-img-top" src="images/C5c76N-HrTAWyQALBl1UpixUZkx-raJ-Tl_er656OcRDaP6fOX1V6azt7tPZlbWthEpL6r8Ikw8HPE1coKctyVgnbZYaBQ.jpg" alt="Басист с бас-гитарой на сцене">
+                <div class="card-body d-flex flex-column">
+                <span class="badge musician-badge align-self-start mb-3">Ритм-секция</span>
+                <h3 class="h5">Басист «Низкий старт»</h3>
+                <p class="text-muted">Самый бесполезный, листайте дальше</p>
+                <p class="fw-bold mb-3 mt-auto">99 руб.</p>
+                <a class="btn btn-primary" href="product.html?id=bassist">
                 Подробнее
                 </a>
+                </div>
             </div>
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-            <div class="border rounded h-100 p-4">
-                <span class="badge bg-warning text-dark mb-3">Хит</span>
-                <h3 class="h5">Товар 2</h3>
-                <p class="text-muted">
-                Краткое описание учебного товара.
-                </p>
-                <p class="fw-bold mb-3">1500 руб.</p>
-                <a class="btn btn-primary" href="product.html">
+            <div class="card h-100 shadow-sm">
+                <img class="card-img-top" src="images/IR6JgF6nQx6B3-r15J_LUInFx4rtfj2k2N6dJb64IFMHHAVC-M3W0xW_TmhrTQRWi4MoXEFRdZWsp-QUNtMh-0CV.jpg" alt="Гитарист играет на сцене">
+                <div class="card-body d-flex flex-column">
+                <span class="badge musician-badge align-self-start mb-3">Сиги в комплекте</span>
+                <h3 class="h5">Гитарист «Деменция»</h3>
+                <p class="text-muted">Знает 4 аккорда. Просто 4.</p>
+                <p class="fw-bold mb-3 mt-auto">5 200 руб.</p>
+                <a class="btn btn-primary" href="product.html?id=guitarist">
                 Подробнее
                 </a>
+                </div>
             </div>
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-            <div class="border rounded h-100 p-4">
-                <span class="badge bg-danger mb-3">Скидка</span>
-                <h3 class="h5">Товар 3</h3>
-                <p class="text-muted">
-                Краткое описание учебного товара.
-                </p>
-                <p class="fw-bold mb-3">2000 руб.</p>
-                <a class="btn btn-primary" href="product.html">
+            <div class="card h-100 shadow-sm">
+                <img class="card-img-top" src="images/T3vsRoP8yxX7SLvznl7PVkWVL_Sg8cHdfqaM6n_bGIk7os62zRyeni-76R4dAPbS-bgxZSD3tf1w8TqcH0DIIS-vLiMs0g.jpg" alt="Барабанщик за установкой">
+                <div class="card-body d-flex flex-column">
+                <span class="badge musician-badge align-self-start mb-3">Стабильный алкоголизм</span>
+                <h3 class="h5">Барабанщик «Киселька boy»</h3>
+                <p class="text-muted">У него и так много проектов</p>
+                <p class="fw-bold mb-3 mt-auto">4 900 руб.</p>
+                <a class="btn btn-primary" href="product.html?id=drummer">
                 Подробнее
                 </a>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img class="card-img-top" src="images/DXUW-sRUgsZepZ3qooO-U-hAPdtS4dElcLRRxuF-lGPFXOrFBmKS07ooecHa3zkLA9tExopixnR4mnrCUozcDhoGyxMf-Q.jpg" alt="Вокалистка выступает с гитарой">
+                <div class="card-body d-flex flex-column">
+                <span class="badge musician-badge align-self-start mb-3">Голос группы</span>
+                <h3 class="h5">Вокалистка «Саня»</h3>
+                <p class="text-muted">Расскажет волшебные истории на концерте</p>
+                <p class="fw-bold mb-3 mt-auto">5 800 руб.</p>
+                <a class="btn btn-primary" href="product.html?id=vocalist">
+                Подробнее
+                </a>
+                </div>
             </div>
             </div>
         </div>
@@ -204,7 +198,7 @@
             <div class="row align-items-center g-3">
             <div class="col-12 col-md-6">
                 <p class="mb-0">
-                &copy; 2026 Bootstrap Shop. Учебный проект.
+                &copy; 2026 Муз-Раб.
                 </p>
             </div>
 
@@ -221,7 +215,7 @@
     </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
     </script>
 
 

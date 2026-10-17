@@ -1,16 +1,168 @@
+:root {
+  --shop-apricot: #F7B267;
+  --shop-orange: #F79D65;
+  --shop-coral: #F4845F;
+  --shop-tangerine: #F27059;
+  --shop-red: #F25C54;
+  --shop-ink: #35251f;
+  --shop-paper: #fffaf5;
+  --bs-primary: var(--shop-tangerine);
+  --bs-primary-rgb: 242, 112, 89;
+  --bs-link-color: #c54b3d;
+  --bs-link-hover-color: #9f352b;
+  --bs-link-color-rgb: 197, 75, 61;
+  --bs-link-hover-color-rgb: 159, 53, 43;
+  --bs-body-color: var(--shop-ink);
+  --bs-body-bg: var(--shop-paper);
+  --bs-border-color: #f0d7c7;
+}
+
 body {
   min-height: 100vh;
+  background: var(--shop-paper);
 }
 
-.placeholder-box {
-  min-height: 240px;
+.navbar {
+  background: var(--shop-ink) !important;
 }
 
-.placeholder-image {
+.navbar-brand {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.navbar-brand span {
+  color: var(--shop-apricot);
+}
+
+.hero {
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: linear-gradient(125deg, var(--shop-apricot), var(--shop-orange) 48%, var(--shop-red));
+}
+
+.hero h1 {
+  max-width: 12ch;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
   min-height: 320px;
+  object-fit: cover;
+}
+
+.btn-primary {
+  --bs-btn-color: var(--shop-ink);
+  --bs-btn-bg: var(--shop-orange);
+  --bs-btn-border-color: var(--shop-orange);
+  --bs-btn-hover-color: var(--shop-ink);
+  --bs-btn-hover-bg: var(--shop-apricot);
+  --bs-btn-hover-border-color: var(--shop-apricot);
+  --bs-btn-active-color: var(--shop-ink);
+  --bs-btn-active-bg: var(--shop-apricot);
+  --bs-btn-active-border-color: var(--shop-apricot);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #a83b31;
+  --bs-btn-border-color: var(--shop-coral);
+  --bs-btn-hover-color: var(--shop-ink);
+  --bs-btn-hover-bg: var(--shop-coral);
+  --bs-btn-hover-border-color: var(--shop-coral);
+  --bs-btn-active-color: var(--shop-ink);
+  --bs-btn-active-bg: var(--shop-coral);
+  --bs-btn-active-border-color: var(--shop-coral);
+}
+
+.btn-outline-secondary {
+  --bs-btn-color: #76574b;
+  --bs-btn-border-color: var(--shop-coral);
+  --bs-btn-hover-color: var(--shop-ink);
+  --bs-btn-hover-bg: var(--shop-apricot);
+  --bs-btn-hover-border-color: var(--shop-apricot);
+  --bs-btn-active-color: var(--shop-ink);
+  --bs-btn-active-bg: var(--shop-apricot);
+  --bs-btn-active-border-color: var(--shop-apricot);
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid #f0d7c7;
+  border-radius: 1rem;
+}
+
+.card-header {
+  background: #fff0e2;
 }
 
 .card-img-top {
-  height: 180px;
+  height: 230px;
   object-fit: cover;
+}
+
+.product-image {
+  width: 100%;
+  height: min(68vh, 620px);
+  min-height: 350px;
+  object-fit: cover;
+}
+
+.musician-badge {
+  color: var(--shop-ink);
+  background: var(--shop-apricot);
+}
+
+.section-kicker {
+  color: #b84638;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.feature-card {
+  background: #fff;
+  border: 1px solid #f0d7c7;
+  border-radius: 1rem;
+}
+
+.table {
+  --bs-table-striped-bg: #fff0e2;
+}
+
+.alert-info,
+.alert-warning {
+  color: var(--shop-ink);
+  background: #fff0e2;
+  border-color: var(--shop-coral);
+}
+
+.accordion {
+  --bs-accordion-active-bg: #fff0e2;
+  --bs-accordion-active-color: var(--shop-ink);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgb(244 132 95 / 25%);
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: var(--shop-coral);
+  box-shadow: 0 0 0 0.25rem rgb(244 132 95 / 25%);
+}
+
+.form-check-input:checked {
+  background-color: #cf4b3e;
+  border-color: #cf4b3e;
+}
+
+footer {
+  background: var(--shop-ink);
+}
+
+@media (max-width: 767.98px) {
+  .hero-image {
+    min-height: 250px;
+    max-height: 340px;
+  }
 }

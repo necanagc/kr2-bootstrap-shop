@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Товар</title>
+    <title>Музыкант — Муз-Раб</title>
 
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
+            <a class="navbar-brand" href="index.html">Муз<span>-Раб</span></a>
 
             <button
             class="navbar-toggler"
@@ -35,11 +35,7 @@
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href="catalog.html">Каталог</a>
-                </li>
-
-                <li class="nav-item">
-                <a class="nav-link" href="product.html">Товар</a>
+                <a class="nav-link" href="catalog.html">Музыканты</a>
                 </li>
 
                 <li class="nav-item">
@@ -57,7 +53,7 @@
                     Дополнительно
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
+                    <li><a class="dropdown-item" href="catalog.html">Все музыканты</a></li>
                     <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
                     <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
                 </ul>
@@ -71,32 +67,28 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-            <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Товар 1</li>
+            <li class="breadcrumb-item"><a href="catalog.html">Музыканты</a></li>
+            <li class="breadcrumb-item active" aria-current="page" data-musician-name>Музыкант</li>
             </ol>
         </nav>
 
         <div class="row g-4">
             <div class="col-12 col-lg-6">
             <div class="card shadow-sm">
-                <div class="placeholder-image bg-light border rounded d-flex align-items-center justify-content-center">
-                <span class="text-muted">Изображение товара</span>
-                </div>
+                <img class="product-image" data-musician-image src="" alt="">
             </div>
             </div>
 
             <div class="col-12 col-lg-6">
-            <span class="badge bg-success mb-3">Новинка</span>
-            <h1 class="h2">Товар 1</h1>
-            <p class="lead text-muted">
-                Подробное описание учебного товара для страницы карточки.
-            </p>
+            <span class="badge musician-badge mb-3" data-musician-tag></span>
+            <h1 class="h2" data-musician-name></h1>
+            <p class="lead text-muted" data-musician-description></p>
 
-            <p class="fs-3 fw-bold">1000 руб.</p>
+            <p class="fs-3 fw-bold" data-musician-price></p>
 
             <div class="d-flex gap-2 mb-4">
-                <a class="btn btn-primary btn-lg" href="order.html">
-                Оформить заявку
+                <a class="btn btn-primary btn-lg" data-order-link href="order.html">
+                Позвать в группу
                 </a>
                 <a class="btn btn-outline-secondary btn-lg" href="catalog.html">
                 Назад в каталог
@@ -104,7 +96,7 @@
             </div>
 
             <div class="alert alert-warning" role="alert">
-                Это учебная карточка товара. Данные используются для демонстрации Bootstrap-компонентов.
+                Цена договорная. Дружбу, авторские права и чай после концерта оплачиваем отдельно.
             </div>
             </div>
         </div>
@@ -117,15 +109,23 @@
                 <tbody>
                 <tr>
                     <th scope="row">Категория</th>
-                    <td>Учебные товары</td>
+                    <td data-musician-role></td>
                 </tr>
                 <tr>
                     <th scope="row">Цена</th>
-                    <td>1000 руб.</td>
+                    <td data-musician-price></td>
                 </tr>
                 <tr>
                     <th scope="row">Наличие</th>
-                    <td>В наличии</td>
+                    <td data-musician-availability></td>
+                </tr>
+                <tr>
+                    <th scope="row">Опыт</th>
+                    <td data-musician-experience></td>
+                </tr>
+                <tr>
+                    <th scope="row">Специализация</th>
+                    <td data-musician-specialty></td>
                 </tr>
                 </tbody>
             </table>
@@ -147,7 +147,7 @@
                 aria-expanded="true"
                 aria-controls="faqOne"
                 >
-                Можно ли оформить заявку без регистрации?
+                Можно ли сначала сыграть вместе?
                 </button>
             </h3>
             <div
@@ -156,7 +156,7 @@
                 data-bs-parent="#faqAccordion"
             >
                 <div class="accordion-body">
-                Да, в учебном проекте заявка оформляется без регистрации.
+                Конечно! Выберите музыканта, оставьте заявку — договоримся о пробной репетиции. Беруши можно принести свои.
                 </div>
             </div>
             </div>
@@ -171,7 +171,7 @@
                 aria-expanded="false"
                 aria-controls="faqTwo"
                 >
-                Где используется Bootstrap?
+                Цена указана за концерт?
                 </button>
             </h3>
             <div
@@ -180,7 +180,7 @@
                 data-bs-parent="#faqAccordion"
             >
                 <div class="accordion-body">
-                Bootstrap используется для сетки, карточек, форм, навигации, сообщений и модальных окон.
+                Условия обсуждаются индивидуально. На концерты, туры и внеплановые бисы — тоже.
                 </div>
             </div>
             </div>
@@ -191,5 +191,6 @@
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
     </script>
+    <script src="js/product.js"></script>
 </body>
 </html>
