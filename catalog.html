@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог — Bootstrap Shop</title>
+  <title>Музыканты — Муз-Раб</title>
 
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -11,10 +11,10 @@
   >
   <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="bg-light">
+<body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
+        <a class="navbar-brand" href="index.html">Муз<span>-Раб</span></a>
 
         <button
         class="navbar-toggler"
@@ -35,11 +35,7 @@
             </li>
 
             <li class="nav-item">
-            <a class="nav-link" href="catalog.html">Каталог</a>
-            </li>
-
-            <li class="nav-item">
-            <a class="nav-link" href="product.html">Товар</a>
+            <a class="nav-link active" aria-current="page" href="catalog.html">Музыканты</a>
             </li>
 
             <li class="nav-item">
@@ -57,7 +53,7 @@
                 Дополнительно
             </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
+                <li><a class="dropdown-item" href="catalog.html">Все музыканты</a></li>
                 <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
                 <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
             </ul>
@@ -69,165 +65,69 @@
 
 
   <main class="container my-5">
-    <div class="alert alert-info" role="alert">
-      Выберите товар из каталога. Карточки товаров оформлены с помощью компонента Bootstrap `card`.
-    </div>
-
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h1 class="h2 mb-0">Каталог товаров</h1>
-      <a class="btn btn-outline-primary" href="order.html">
-        Оставить заявку
-      </a>
+    <p class="section-kicker mb-2">Найдём недостающий звук</p>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4">
+      <div>
+        <h1 class="display-6 fw-bold mb-2">Каталог музыкантов</h1>
+        <p class="lead text-muted mb-0">Подберём музыканта в группу: с чувством ритма, алкоголизмом и прочими радостями.</p>
+      </div>
+      <a class="btn btn-outline-primary" href="order.html">Оставить заявку</a>
     </div>
 
     <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h2 class="card-title h5">Товар 1</h2>
-                    <span class="badge bg-success">Новинка</span>
-                </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="card h-100 shadow-sm">
+          <img class="card-img-top" src="images/C5c76N-HrTAWyQALBl1UpixUZkx-raJ-Tl_er656OcRDaP6fOX1V6azt7tPZlbWthEpL6r8Ikw8HPE1coKctyVgnbZYaBQ.jpg" alt="Басист с бас-гитарой на сцене" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <span class="badge musician-badge align-self-start mb-3">Ритм-секция</span>
+            <h2 class="card-title h5">Басист «Низкий старт»</h2>
+            <p class="card-text text-muted">Самый бесполезный, листайте дальше</p>
+            <p class="fw-bold fs-5 mt-auto">99 руб.</p>
+            <a class="btn btn-primary" href="product.html?id=bassist">Подробнее</a>
+          </div>
+        </article>
+      </div>
 
-                <p class="card-text text-muted">
-                    Краткое описание учебного товара для каталога.
-                </p>
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="card h-100 shadow-sm">
+          <img class="card-img-top" src="images/IR6JgF6nQx6B3-r15J_LUInFx4rtfj2k2N6dJb64IFMHHAVC-M3W0xW_TmhrTQRWi4MoXEFRdZWsp-QUNtMh-0CV.jpg" alt="Гитарист играет на сцене" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <span class="badge musician-badge align-self-start mb-3">Сиги в комплекте</span>
+            <h2 class="card-title h5">Гитарист «Деменция»</h2>
+            <p class="card-text text-muted">Знает 4 аккорда. Просто 4.</p>
+            <p class="fw-bold fs-5 mt-auto">5 200 руб.</p>
+            <a class="btn btn-primary" href="product.html?id=guitarist">Подробнее</a>
+          </div>
+        </article>
+      </div>
 
-                <p class="fw-bold fs-5 mt-auto">1000 руб.</p>
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="card h-100 shadow-sm">
+          <img class="card-img-top" src="images/T3vsRoP8yxX7SLvznl7PVkWVL_Sg8cHdfqaM6n_bGIk7os62zRyeni-76R4dAPbS-bgxZSD3tf1w8TqcH0DIIS-vLiMs0g.jpg" alt="Барабанщик за установкой" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <span class="badge musician-badge align-self-start mb-3">Стабильный алкоголизм</span>
+            <h2 class="card-title h5">Барабанщик «Киселька boy»</h2>
+            <p class="card-text text-muted">У него и так много проектов</p>
+            <p class="fw-bold fs-5 mt-auto">4 900 руб.</p>
+            <a class="btn btn-primary" href="product.html?id=drummer">Подробнее</a>
+          </div>
+        </article>
+      </div>
 
-                <div class="d-flex gap-2">
-                    <a class="btn btn-primary" href="product.html">Подробнее</a>
-                    <button
-                    class="btn btn-outline-primary"
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#orderModal"
-                    >
-                    Заказать
-                    </button>
-                </div>
-                </div>
-            </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h2 class="card-title h5">Товар 2</h2>
-                    <span class="badge bg-warning text-dark">Хит</span>
-                </div>
-
-                <p class="card-text text-muted">
-                    Краткое описание второго учебного товара.
-                </p>
-
-                <p class="fw-bold fs-5 mt-auto">1500 руб.</p>
-
-                <div class="d-flex gap-2">
-                    <a class="btn btn-primary" href="product.html">Подробнее</a>
-                    <button
-                    class="btn btn-outline-primary"
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#orderModal"
-                    >
-                    Заказать
-                    </button>
-                </div>
-                </div>
-            </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h2 class="card-title h5">Товар 3</h2>
-                    <span class="badge bg-danger">Скидка</span>
-                </div>
-
-                <p class="card-text text-muted">
-                    Краткое описание третьего учебного товара.
-                </p>
-
-                <p class="fw-bold fs-5 mt-auto">2000 руб.</p>
-
-                <div class="d-flex gap-2">
-                    <a class="btn btn-primary" href="product.html">Подробнее</a>
-                    <button
-                    class="btn btn-outline-primary"
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#orderModal"
-                    >
-                    Заказать
-                    </button>
-                </div>
-                </div>
-            </div>
-        </div>
-
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="card h-100 shadow-sm">
+          <img class="card-img-top" src="images/DXUW-sRUgsZepZ3qooO-U-hAPdtS4dElcLRRxuF-lGPFXOrFBmKS07ooecHa3zkLA9tExopixnR4mnrCUozcDhoGyxMf-Q.jpg" alt="Вокалистка выступает с гитарой" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <span class="badge musician-badge align-self-start mb-3">Голос группы</span>
+            <h2 class="card-title h5">Вокалистка «Саня»</h2>
+            <p class="card-text text-muted">Расскажет волшебные истории на концерте</p>
+            <p class="fw-bold fs-5 mt-auto">5 800 руб.</p>
+            <a class="btn btn-primary" href="product.html?id=vocalist">Подробнее</a>
+          </div>
+        </article>
+      </div>
     </div>
   </main>
-
-    <div
-    class="modal fade"
-    id="orderModal"
-    tabindex="-1"
-    aria-labelledby="orderModalLabel"
-    aria-hidden="true"
-    >
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h2 class="modal-title h5" id="orderModalLabel">
-            Быстрая заявка
-            </h2>
-            <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Закрыть"
-            ></button>
-        </div>
-
-        <div class="modal-body">
-            <p class="text-muted">
-            Оставьте контактные данные, и менеджер свяжется с вами.
-            </p>
-
-            <form>
-            <div class="mb-3">
-                <label for="modal-name" class="form-label">Имя</label>
-                <input id="modal-name" type="text" class="form-control" required>
-            </div>
-
-            <div class="mb-3">
-                <label for="modal-phone" class="form-label">Телефон</label>
-                <input id="modal-phone" type="tel" class="form-control" required>
-            </div>
-
-            <div class="form-check mb-3">
-                <input id="modal-agree" class="form-check-input" type="checkbox" required>
-                <label class="form-check-label" for="modal-agree">
-                Согласен на обработку данных
-                </label>
-            </div>
-            </form>
-        </div>
-
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-            Закрыть
-            </button>
-            <button type="button" class="btn btn-primary">
-            Отправить
-            </button>
-        </div>
-        </div>
-    </div>
-    </div>
 
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
