@@ -3,7 +3,11 @@ const musicians = {
     name: 'Басист «Низкий старт»',
     role: 'Басист',
     tag: 'Ритм-секция',
-    image: 'images/C5c76N-HrTAWyQALBl1UpixUZkx-raJ-Tl_er656OcRDaP6fOX1V6azt7tPZlbWthEpL6r8Ikw8HPE1coKctyVgnbZYaBQ.jpg',
+    images: [
+      'images/bass/C5c76N-HrTAWyQALBl1UpixUZkx-raJ-Tl_er656OcRDaP6fOX1V6azt7tPZlbWthEpL6r8Ikw8HPE1coKctyVgnbZYaBQ.jpg',
+      'images/bass/149_1.jpg',
+      'images/bass/DSC_0234.png'
+    ],
     description: 'Самый бесполезный, листайте дальше',
     price: '99',
     experience: '5 лет на сцене',
@@ -14,7 +18,11 @@ const musicians = {
     name: 'Гитарист «Деменция»',
     role: 'Гитарист',
     tag: 'Сиги в комплекте',
-    image: 'images/IR6JgF6nQx6B3-r15J_LUInFx4rtfj2k2N6dJb64IFMHHAVC-M3W0xW_TmhrTQRWi4MoXEFRdZWsp-QUNtMh-0CV.jpg',
+    images: [
+      'images/guitar/IR6JgF6nQx6B3-r15J_LUInFx4rtfj2k2N6dJb64IFMHHAVC-M3W0xW_TmhrTQRWi4MoXEFRdZWsp-QUNtMh-0CV.jpg',
+      'images/guitar/DSC_0166(2).png',
+      'images/guitar/PICT1335.JPG'
+    ],
     description: 'Знает 4 аккорда. Просто 4.',
     price: '5 200',
     experience: '7 лет на сцене',
@@ -25,7 +33,11 @@ const musicians = {
     name: 'Вокалистка «Саня»',
     role: 'Вокалистка',
     tag: 'Голос группы',
-    image: 'images/DXUW-sRUgsZepZ3qooO-U-hAPdtS4dElcLRRxuF-lGPFXOrFBmKS07ooecHa3zkLA9tExopixnR4mnrCUozcDhoGyxMf-Q.jpg',
+    images: [
+      'images/vocal/DSC_0152.png',
+      'images/vocal/DXUW-sRUgsZepZ3qooO-U-hAPdtS4dElcLRRxuF-lGPFXOrFBmKS07ooecHa3zkLA9tExopixnR4mnrCUozcDhoGyxMf-Q.jpg',
+      'images/vocal/PICT1322.JPG'
+    ],
     description: 'Расскажет волшебные истории на концерте',
     price: '5 800',
     experience: '6 лет на сцене',
@@ -36,7 +48,11 @@ const musicians = {
     name: 'Барабанщик «Киселька boy»',
     role: 'Барабанщик',
     tag: 'Стабильный алкоголизм',
-    image: 'images/T3vsRoP8yxX7SLvznl7PVkWVL_Sg8cHdfqaM6n_bGIk7os62zRyeni-76R4dAPbS-bgxZSD3tf1w8TqcH0DIIS-vLiMs0g.jpg',
+    images: [
+      'images/drums/T3vsRoP8yxX7SLvznl7PVkWVL_Sg8cHdfqaM6n_bGIk7os62zRyeni-76R4dAPbS-bgxZSD3tf1w8TqcH0DIIS-vLiMs0g.jpg',
+      'images/drums/102.jpg',
+      'images/drums/DSC_0116.JPG'
+    ],
     description: 'У него и так много проектов',
     price: '4 900',
     experience: '4 года на сцене',
@@ -63,8 +79,19 @@ document.querySelector('[data-musician-description]').textContent = musician.des
 document.querySelectorAll('[data-musician-price]').forEach((element) => {
   element.textContent = `${musician.price} руб.`;
 });
-document.querySelector('[data-musician-image]').src = musician.image;
-document.querySelector('[data-musician-image]').alt = musician.role;
+const musicianCarousel = document.querySelector('[data-musician-carousel]');
+musician.images.forEach((image, index) => {
+  const item = document.createElement('div');
+  item.className = `carousel-item${index === 0 ? ' active' : ''}`;
+
+  const imageElement = document.createElement('img');
+  imageElement.className = 'product-image';
+  imageElement.src = image;
+  imageElement.alt = `${musician.role} — фото ${index + 1}`;
+
+  item.append(imageElement);
+  musicianCarousel.append(item);
+});
 document.querySelector('[data-musician-experience]').textContent = musician.experience;
 document.querySelector('[data-musician-specialty]').textContent = musician.specialty;
 document.querySelector('[data-musician-availability]').textContent = musician.availability;

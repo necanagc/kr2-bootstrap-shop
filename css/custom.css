@@ -24,32 +24,61 @@ body {
 
 .navbar {
   background: var(--shop-ink) !important;
+  min-height: 84px;
 }
 
 .navbar-brand {
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(1.75rem, 2.2vw, 2.25rem);
+  font-weight: 900;
+  letter-spacing: -0.035em;
 }
 
 .navbar-brand span {
   color: var(--shop-apricot);
 }
 
-.hero {
-  overflow: hidden;
-  border-radius: 1.5rem;
-  background: linear-gradient(125deg, var(--shop-apricot), var(--shop-orange) 48%, var(--shop-red));
+.home-hero {
+  display: flex;
+  align-items: stretch;
+  min-height: calc(100vh - 84px);
+  min-height: calc(100svh - 84px);
+  padding: 2rem 0;
+  background: url("../images/general.JPG") center / cover no-repeat;
 }
 
-.hero h1 {
-  max-width: 12ch;
+.home-hero > .container-fluid {
+  display: flex;
 }
 
-.hero-image {
+.home-hero__slogan {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
-  height: 100%;
-  min-height: 320px;
-  object-fit: cover;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2rem, 5.2vw, 5rem);
+  line-height: 0.98;
+  text-shadow: 0 2px 12px rgb(0 0 0 / 85%);
+}
+
+.home-hero__slogan > span {
+  display: block;
+  min-width: 0;
+}
+
+.home-hero__step--one {
+  text-align: right;
+}
+
+.home-hero__step--two {
+  text-align: center;
+}
+
+.home-hero__step--three {
+  text-align: left;
 }
 
 .btn-primary {
@@ -160,9 +189,8 @@ footer {
   background: var(--shop-ink);
 }
 
-@media (max-width: 767.98px) {
-  .hero-image {
-    min-height: 250px;
-    max-height: 340px;
+@media (max-width: 575.98px) {
+  .home-hero__slogan {
+    font-size: clamp(2rem, 9vw, 3.5rem);
   }
 }
