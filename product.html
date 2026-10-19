@@ -75,7 +75,19 @@
         <div class="row g-4">
             <div class="col-12 col-lg-6">
             <div class="card shadow-sm">
-                <img class="product-image" data-musician-image src="" alt="">
+                <div id="productMusicianCarousel" class="carousel slide">
+                    <div class="carousel-inner" data-musician-carousel></div>
+                    <button class="carousel-control-prev" type="button"
+                            data-bs-target="#productMusicianCarousel" data-bs-slide="prev"
+                            aria-label="Предыдущее фото">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button"
+                            data-bs-target="#productMusicianCarousel" data-bs-slide="next"
+                            aria-label="Следующее фото">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
             </div>
             </div>
 
